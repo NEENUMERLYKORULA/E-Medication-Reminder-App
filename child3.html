@@ -1,0 +1,43 @@
+<html>
+<head>
+<script langauge="javascript">
+function post_value(){
+opener.document.f1.p_name.value = document.frm.c_name.value;
+ self.close();
+}
+</script>
+<title>NEW MEDICATION DETAILS</title>
+</head>
+
+<body >
+
+<form name="frm" method=post action=''>
+<center>
+	  E-PRESCRIPTION NO:<input type="text" name="txt3"/></input><br>
+	  MEDICINE NAME:<input type="text" name="txt1"/></input><br>
+	  DOSAGE:<input type="text" name="txt2"/></input><br>
+	  
+	  <input type="submit" name="submit1"></submit>
+
+	  </center>
+ 	  </form>    
+</html>
+<?php
+if(isset($_POST['submit1']))
+{
+
+$con2 = mysql_connect("localhost","root",""); 
+mysql_select_db("mrs", $con2); 
+
+		$txt3=$_POST['txt3'];
+		$txt1=$_POST['txt1'];
+		$txt2=$_POST['txt2'];
+		$query4 = "INSERT INTO med (Ep_no, medname, dosage)VALUES ('$txt3', '$txt1', '$txt2')";
+	
+echo $query4;
+
+ $retval4 = mysql_query( $query4, $con2);
+   
+ mysql_close($con2);
+}
+?>

@@ -1,0 +1,47 @@
+<html>
+	<head><h1><b><u><center>HALL ENTRY</center></u></b></h1>
+		<title>hall entry</title>
+	</head>
+		<body bgcolor="pink">
+			<form action="hlentry.php" method="POST">
+				<center>
+					<table border="2">
+						<tr>
+							<td>Hall No:</td>	
+							<td><input type="text" name="t1" required></td>
+						</tr>	
+						<tr>	
+							<td>Hall Name:</td>
+							<td><input type="text" name="t2" required></td>
+						</tr>
+						<tr>
+							<td>Block No:</td>
+							<td><input type="text" name="t3" required></td>
+						</tr>
+						<tr>
+							<td rowspan="2">Facilities:</td>
+							<td>NO OF SEATS:<input type="text" name="t4" required><br>
+							
+								<input type="radio" name="a1" value="yes">A/C
+								<input type="radio" name="a1" value="no">non A/C
+								<br>
+								no of mic:<input type="text" name="t5" required><br>
+								projector:							
+						  		<input type="radio" name="b1" value="yes">YES
+								<input type="radio" name="b1" value="no">NO
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								
+					
+						<input type="submit" value="submit" name="submit">
+						<input type="reset" value="reset">
+					
+							</td>
+						</tr>
+					</table>
+				</center>
+			</form>
+		</body>
+</html>
